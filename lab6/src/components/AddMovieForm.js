@@ -5,12 +5,14 @@ const AddMovieForm = ({ onAdd }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAdd(title);
-    setTitle('');
+    if (title.trim()) {
+      onAdd(title);
+      setTitle('');
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="form-inline" onSubmit={handleSubmit}>
       <input
         type="text"
         value={title}

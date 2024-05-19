@@ -7,6 +7,7 @@ const Filter = ({ filter, setFilter }) => {
       value={filter}
       onChange={(e) => setFilter(e.target.value)}
       placeholder="Filter movies"
+      className="filter-input"
     />
   );
 };
